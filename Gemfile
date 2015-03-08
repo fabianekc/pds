@@ -13,6 +13,11 @@ gem 'jbuilder'
 gem 'therubyracer'
 gem 'bunny'
 
+group :production do
+  gem 'rails_12factor'
+  gem 'puma'
+end
+
 # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
 gem 'spring',        group: :development
 
