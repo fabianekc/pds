@@ -1,1 +1,1 @@
-worker: bundle exec rails r ApplicationController.helpers.get
+worker: bundle exec rake rabbit:consume
