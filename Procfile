@@ -1,1 +1,1 @@
-worker: rails r ApplicationController.helpers.get
+worker: bundle exec rails r ApplicationController.helpers.get
