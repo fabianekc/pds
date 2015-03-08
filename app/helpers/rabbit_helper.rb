@@ -1,7 +1,7 @@
 require 'bunny'
 
 module RabbitHelper
-  class myMessage
+  class MSG
     def initialize
       # Ensure that the queue is created in RabbitMQ.
       myMessage.messages_queue
@@ -41,10 +41,10 @@ module RabbitHelper
 
   def get
     # Wait for a message from the queue
-    myMessage.messages_queue.subscribe(:ack => true, :timeout => 10,
-                                       :message_max => 1) do |msg|
+    MSG.messages_queue.subscribe(:ack => true, :timeout => 10,
+                                 :message_max => 1) do |itm|
       # Show what we got
-puts msg[:payload]
+puts itm[:payload]
     end
   end
 
