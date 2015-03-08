@@ -7,6 +7,7 @@ gem 'pg', '0.17.1'
 gem 'sass-rails'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails'
+gem 'jquery-rails'
 gem 'therubyracer'
 
 # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
