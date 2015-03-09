@@ -8,9 +8,8 @@ namespace :rabbit do
     puts "waiting for messages..."
 
     # Wait for a message from the queue
-    q.subscribe(:ack => true, :timeout => 10, :message_max => 1) do |itm|
-      # Show what we got
-      puts itm[:payload]
+    q.subscribe(:block => true) do |delivery_info, properties, body|
+      puts " [x] Received #{body}"
     end
 
   end
