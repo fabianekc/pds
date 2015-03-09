@@ -10,7 +10,7 @@ namespace :rabbit do
     # Wait for a message from the queue
     q.subscribe(:block => true) do |delivery_info, properties, body|
       puts " [x] Received #{body}"
-      @d = Data.new
+      @d = Response.new
       obj = JSON.parse(body)
       obj.keys.each do |k|
         @d[k] = obj[k]
