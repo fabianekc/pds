@@ -1,7 +1,7 @@
 require 'bunny'
 namespace :rabbit do
   task consume: :environment do
-    conn = Bunny.new(ENV['RABBITMQ_BIGWIG_RX_URL'])
+    conn = Bunny.new("amqp://xvxqvlzc:ThQpXOX21MZHh58ghM_NQx01VyFg5ica@bunny.cloudamqp.com/xvxqvlzc")
     conn.start
     ch   = conn.create_channel
     q    = ch.queue("message")
