@@ -8,5 +8,8 @@
   "success_url": "/configure",
   "addons": [
     "heroku-postgresql:hobby-dev",
-    "cloudamqp:lemur"]
+    "cloudamqp:lemur"],
+  "scripts": {
+    "postdeploy": "bundle exec rake db:migrate"
+  }
 }
