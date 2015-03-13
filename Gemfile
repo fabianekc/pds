@@ -12,6 +12,7 @@ gem 'turbolinks'
 gem 'jbuilder'
 gem 'kaminari'
 gem 'therubyracer'
+gem 'httparty'
 #gem 'bunny'
 
 group :development, :test, :mails_production do

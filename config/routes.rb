@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   namespace :api do
-    resources :responses
+    resources :responses, defaults: {format: 'json'}
   end
   scope "(:locale)", :locale => /en|de/ do
     root  'static#hello'
