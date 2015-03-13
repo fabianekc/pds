@@ -1,1 +1,1 @@
-worker: bundle exec rake rabbit:consume
+web: bundle exec rails server -p $PORT & bundle exec rake rabbit:consume
