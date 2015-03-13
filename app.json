@@ -6,9 +6,7 @@
   "logo": "https://s3-eu-west-1.amazonaws.com/crowdstatusimages/logo_fb.png",
   "keywords": ["crowd status", "personal data store"],
   "success_url": "/configure",
-  "addons": [
-    "heroku-postgresql:hobby-dev",
-    "cloudamqp:lemur"],
+  "addons": ["heroku-postgresql:hobby-dev"],
   "scripts": {
     "postdeploy": "bundle exec rake db:migrate"
   }
