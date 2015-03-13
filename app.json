@@ -1,0 +1,7 @@
+{
+  "name": "Personal Data Store",
+  "description": "A personal data store that hosts your Crowd Status data in the Amazon cloud.",
+  "repository": "https://github.com/fabianekc/pds",
+  "logo": "https://s3-eu-west-1.amazonaws.com/crowdstatusimages/logo_fb.png",
+  "keywords": ["crowd status", "personal data store"]
+}
