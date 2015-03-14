@@ -8,8 +8,6 @@ module Api
           :quest_id,
           :author,
           :value,
-          :valdatime,
-          :confidence,
           :vat,
           :request_ip,
           :request_header,
