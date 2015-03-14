@@ -7,19 +7,19 @@ module Api
         params.require(:response).permit(
           :quest_id,
           :author,
-          :response,
+          :value,
           :valdatime,
           :confidence,
           :vat,
           :request_ip,
           :request_header,
-          :sid)
+          :session_id)
       end
 
       def query_params
         # this assumes that an album belongs to an artist and has an :artist_id
         # allowing us to filter by this
-        params.permit(:query_id, :response)
+        params.permit(:query_id, :value)
       end
 
   end
