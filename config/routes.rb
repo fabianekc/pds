@@ -4,6 +4,6 @@ Rails.application.routes.draw do
   end
   scope "(:locale)", :locale => /en|de/ do
     root  'static#hello'
-    match '/configure', to: 'static#hello', via: 'get'
+    match '/configure', to: 'static#configure', via: 'get'
   end
 end
