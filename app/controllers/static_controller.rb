@@ -13,8 +13,8 @@ class StaticController < ApplicationController
   end
 
   def config1
-    render layout: "empty"
     @user = General.new
+    render layout: "empty"
   end
 
   def config_end
