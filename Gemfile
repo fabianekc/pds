@@ -9,10 +9,12 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails'
 gem 'jquery-rails'
 gem 'turbolinks'
+gem 'bcrypt'
 gem 'jbuilder'
 gem 'kaminari'
 gem 'therubyracer'
 gem 'httparty'
+gem 'less-rails'
 #gem 'bunny'
 
 group :development, :test, :mails_production do
