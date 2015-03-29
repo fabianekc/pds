@@ -1,0 +1,16 @@
+<h2 class="sub-header"><%= @repo.quest_id %></h2>
+<div class="table-responsive">
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Timestamp</th>
+        <th>Value</th>
+      </tr>
+    </thead>
+    <tbody>
+      <%= render partial: "response",
+          collection: Response.where(quest_id: @repo.quest_id),
+          as: :item %>
+    </tbody>
+  </table>
+</div>

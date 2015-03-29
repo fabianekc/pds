@@ -10,7 +10,7 @@ class SessionsController < ApplicationController
       session[:logged_in] = true
       redirect_to overview_path
     else
-      flash[:error] = 'Invalid password'
+      flash[:danger] = 'Invalid password'
       redirect_to root_url
     end
   end

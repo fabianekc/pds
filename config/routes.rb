@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   scope "(:locale)", :locale => /en|de/ do
     root  'static#login'
     resources :sessions, only: [:new, :create, :destroy]
+    resources :repos
     match '/configure',  to: 'static#configure',  via: 'get'
     match '/config1',    to: 'static#config1',    via: 'get'
     match '/config_end', to: 'static#config_end', via: 'get'

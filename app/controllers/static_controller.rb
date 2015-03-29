@@ -9,7 +9,11 @@ class StaticController < ApplicationController
   end
 
   def configure
-    render layout: "empty"
+    if General.count > 0
+      redirect_to root_path
+    else
+      render layout: "empty"
+    end
   end
 
   def config1
@@ -26,8 +30,8 @@ class StaticController < ApplicationController
     if @user.save
       redirect_to config_end_path
     else
-      flash.now[:error] = @user.errors.full_messages.uniq.join(", ")
-      render "config1"
+      flash.now[:danger] = @user.errors.full_messages.uniq.join(", ")
+      render "config1", layout: "empty"
     end
   end
 

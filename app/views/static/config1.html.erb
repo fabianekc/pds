@@ -6,9 +6,11 @@
       <h1>Set Password</h1>
       <p class="lead">Specify password to access this Personal Data Store:</p>
       <div class="form-group" style="margin-left:100px">
+        <label for="user_password" class="sr-only">Password</label>
         <%= f.password_field :password, class: "form-control",
               placeholder: "Password" %>
         <br>
+        <label for="user_password_confirmation" class="sr-only">Password</label>
         <%= f.password_field :password_confirmation, class: "form-control",
               placeholder: "Password Confirmation" %>
       </div>
