@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150318194710) do
+ActiveRecord::Schema.define(version: 20150403220022) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -22,6 +22,29 @@ ActiveRecord::Schema.define(version: 20150318194710) do
     t.datetime "updated_at"
     t.datetime "last_login"
     t.string   "password_digest"
+  end
+
+  create_table "logs", force: true do |t|
+    t.string   "description"
+    t.integer  "log_class"
+    t.text     "log_objects"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "repositories", force: true do |t|
+    t.string   "name"
+    t.string   "source"
+    t.string   "description"
+    t.boolean  "desc_raw"
+    t.string   "author"
+    t.integer  "interval"
+    t.datetime "end_date"
+    t.string   "tags"
+    t.integer  "answer_type_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "vat"
   end
 
   create_table "responses", force: true do |t|

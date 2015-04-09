@@ -1,15 +1,15 @@
-<h2 class="sub-header"><%= cst(@repo.name) unless @repo.nil? %></h2>
+<h2 class="sub-header">Logs</h2>
 <div class="table-responsive">
   <table class="table table-striped">
     <thead>
       <tr>
         <th>Timestamp</th>
-        <th>Value</th>
+        <th width="100%">Event</th>
       </tr>
     </thead>
     <tbody>
-      <%= render partial: "response",
-          collection: @responses,
+      <%= render partial: "log",
+          collection: @logs,
           as: :item %>
     </tbody>
   </table>

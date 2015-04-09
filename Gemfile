@@ -15,6 +15,7 @@ gem 'kaminari'
 gem 'therubyracer'
 gem 'httparty'
 gem 'less-rails'
+gem 'will_paginate'
 #gem 'bunny'
 
 group :development, :test, :mails_production do

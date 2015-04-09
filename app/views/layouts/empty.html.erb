@@ -10,6 +10,13 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="/">Personal Data Store</a>
+      </div>
+    </div>
+  </nav>
   <div class="container">
     <%= render :partial => 'layouts/flash', :locals => {:flash => flash} %>
     <%= yield %>
