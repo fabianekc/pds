@@ -6,7 +6,8 @@ Rails.application.routes.draw do
     root  'static#login'
     resources :sessions, only: [:new, :create, :destroy]
     resources :repos
-    match '/log',        to: 'logs#index',         via: 'get'
+    match '/test',       to: 'static#test',       via: 'get'
+    match '/log',        to: 'logs#index',        via: 'get'
     match '/configure',  to: 'static#configure',  via: 'get'
     match '/config1',    to: 'static#config1',    via: 'get'
     match '/config_end', to: 'static#config_end', via: 'get'

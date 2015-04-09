@@ -4,6 +4,10 @@ class StaticController < ApplicationController
   def overview
   end
 
+  def test
+    render layout: "nil"
+  end
+  
   def login
     render layout: "empty"
   end
