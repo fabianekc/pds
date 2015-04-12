@@ -9,4 +9,5 @@ function collectData(pds, quest_id) {
     document.getElementById('searchForm').hide();
     document.getElementById('result').innerHTML("done");
   });
+  return false;
 }
