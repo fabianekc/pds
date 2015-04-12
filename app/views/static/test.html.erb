@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>test</title>
+  <script
+    src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js">
+  </script>
+</head>
+<body>
+  <p><strong>Question Title</strong><br>some description text</p>
+  <form action="/" id="searchForm">
+    <input type="text" id="searchField" placeholder="your answer">
+    <input type="submit" value="Submit">
+  </form>
+  <div id="result"></div>
+<script>
+// config-begin
+var pds = "https://immense-coast-7846.herokuapp.com";
+var quest_id = "9bWKZ";
+// config-end
+$("#searchForm").submit(function(event) {
+  event.preventDefault();
+  var term = $("#searchField").val();
+  var url = pds + "/api/responses";
+  $.ajax({url: url, dataType: 'jsonp',
+    data: { response: { value: term, vat: quest_id } }
+  });
+  $("#searchForm").hide();
+  $("#result").innerHTML("done");
+});
+</script>
+</body>
+</html>
