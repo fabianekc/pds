@@ -28,6 +28,9 @@ module Api
 
       if get_resource.save
         render :show, status: :created
+        Log.create(description:"submit", log_class:2,
+                   log_objects:"[event: 'data submitted',
+                                 repo: '" + resource_params[:vat] + "']")
       else
         render json: get_resource.errors, status: :unprocessable_entity
       end
