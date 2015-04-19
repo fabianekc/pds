@@ -8,28 +8,11 @@
   </script>
 </head>
 <body>
-  <p><strong>Question Title</strong><br>some description text</p>
-  <form action="/" id="searchForm">
-    <input type="text" id="searchField" placeholder="your answer">
-    <input type="submit" value="Submit">
-  </form>
-  <div id="result"></div>
+  asdf
+  <script type="text/javascript" src="http://37.221.192.79:8080/collectData.js"></script>
   <script type="text/javascript">
   <!--
-//  collectData("https://immense-coast-7846.herokuapp.com", "9bWKZ");
-  var pds = "https://immense-coast-7846.herokuapp.com";
-  var quest_id = "9bWKZ";
-  document.getElementById('searchForm').submit(function(event) {
-    event.preventDefault();
-    var term = document.getElementById('searchField').val();
-    var url = pds + "/api/responses";
-//    $.ajax({url: url, dataType: 'jsonp',
-//      data: { response: { value: term, vat: quest_id } }
-    });
-    document.getElementById('searchForm').hide();
-    document.getElementById('result').innerHTML("done");
-  });
-  return false;
-  //--></script>
+  collectData("https://immense-coast-7846.herokuapp.com", "9bWKZ");
+  --></script>
 </body>
 </html>

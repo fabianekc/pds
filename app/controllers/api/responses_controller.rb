@@ -8,6 +8,7 @@ module Api
           :quest_id,
           :author,
           :value,
+          :comment,
           :vat,
           :request_ip,
           :request_header,
