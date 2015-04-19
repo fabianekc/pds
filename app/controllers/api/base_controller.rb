@@ -27,8 +27,18 @@ module Api
       set_resource(resource_class.new(resource_params))
 
       if get_resource.save
-        render :show, status: :created
-        #render js: get_resource
+        respond_to do |format|
+          format.js { render
+            # raw javascript to be executed on client-side
+            "alert('Hello Rails');",
+            # send HTTP response code on header
+            :status => 404 # page not found,
+            # send json file with @line_item variable as json
+            :json => get_resource,
+            :text => "OK",
+          }
+        end
+        #render :show, status: :created
         Log.create(description:"submit", log_class:2,
                    log_objects:"[event: 'data submitted', repo: '" +
                       resource_params[:vat] + "', value: '" +
