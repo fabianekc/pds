@@ -29,7 +29,7 @@ module Api
       if get_resource.save
         respond_to do |format|
           format.js { render "alert('Hello Rails');",
-            status: 404,
+            status: 200,
             json: get_resource,
             text: "OK" }
           format.html { render :show }
