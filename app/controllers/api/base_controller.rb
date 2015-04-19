@@ -27,8 +27,8 @@ module Api
       set_resource(resource_class.new(resource_params))
 
       if get_resource.save
-        #render :show, status: :created
-        render js: get_resource
+        render :show, status: :created
+        #render js: get_resource
         Log.create(description:"submit", log_class:2,
                    log_objects:"[event: 'data submitted', repo: '" +
                       resource_params[:vat] + "', value: '" +
