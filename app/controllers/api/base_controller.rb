@@ -26,7 +26,7 @@ module Api
     def index
       set_resource(resource_class.new(resource_params))
 
-#      if get_resource.save
+      if get_resource.save
 #        respond_to do |format|
 #          format.js { render "alert('Hello Rails');",
 #            status: 200,
