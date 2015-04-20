@@ -26,16 +26,16 @@ module Api
     def index
       set_resource(resource_class.new(resource_params))
 
-      if get_resource.save
-        respond_to do |format|
-          format.js { render "alert('Hello Rails');",
-            status: 200,
-            json: get_resource,
-            text: "OK" }
-          format.html { render :show }
+#      if get_resource.save
+#        respond_to do |format|
+#          format.js { render "alert('Hello Rails');",
+#            status: 200,
+#            json: get_resource,
+#            text: "OK" }
+#          format.html { render :show }
           #format.json { render json: get_resource }
-        end
-        #render :show, status: :created
+#        end
+        render :show, status: :created
         Log.create(description:"submit", log_class:2,
                    log_objects:"[event: 'data submitted', repo: '" +
                       resource_params[:vat] + "', value: '" +
